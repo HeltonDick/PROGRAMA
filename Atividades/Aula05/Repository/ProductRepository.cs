@@ -35,6 +35,19 @@ namespace Repository
             CustomerData.Products.Add(product);
         }
 
+        public bool Delete(Product product) {
+            return CustomerData.Products.Remove(product);
+        }
+
+        public bool DeleteById(int Id) {
+            Product product = Retrive(Id);
+
+            if (product != null)
+                return Delete(product);
+
+            return false;
+        }
+
         public int GetCount()
         {
             return CustomerData.Customers.Count;

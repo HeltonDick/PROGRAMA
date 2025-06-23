@@ -10,9 +10,22 @@
         public static int InstanceCount = 0;
         public int ObjectCount = 0;
 
-        public bool Validade()
-        {
-            return true;
+        public bool Validade() {
+            bool isValid = true;
+
+            isValid = !string.IsNullOrEmpty(this.Name) &&
+                (this.Id > 0) &&
+                (this.HomeAddress != null) &&
+                (this.WorkAddress != null);
+
+            return isValid;
+        }
+
+        public Customer customer() {
+            return new Customer();
+        }
+
+        public void Save(Customer customer) {
         }
     }
 }

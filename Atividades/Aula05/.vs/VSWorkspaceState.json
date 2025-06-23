@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Aula05",
+    "\\Aula05\\ViewModels",
     "\\Aula05\\Views",
     "\\Aula05\\Views\\Customer",
-    "\\Aula05\\Views\\Home",
+    "\\Aula05\\Views\\Order",
     "\\Modelo"
   ],
-  "SelectedNode": "\\Aula05\\Program.cs",
+  "SelectedNode": "\\Aula05\\Views\\Order\\PlaceOrder.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -23,34 +23,28 @@ namespace Modelo
 
         public Order(int orderId) : this() {
             this.Id = orderId;
-
         }
 
         public Order(int orderId, Address address) : this(orderId) {
             this.ShippingAddress = address;
         }
 
+        public bool Validade() {
+            bool isValid = true;
 
-
-
-
-        public bool Validade()
-        {
-            return true;
+            isValid = (this.OrderItems != null && this.OrderItems.Count > 0) && (this.Id > 0) && (this.Customer != null);
+            return isValid;
         }
 
-        public Order Retrieve(int orderId)
-        {
+        public Order Retrieve(int orderId) {
             return new Order();
         }
 
-        public List<Order> Retrieve()
-        {
+        public List<Order> Retrieve() {
             return new List<Order>();
         }
 
-        public void Save(Order order)
-        {
+        public void Save(Order order) {
         }
     }
 }

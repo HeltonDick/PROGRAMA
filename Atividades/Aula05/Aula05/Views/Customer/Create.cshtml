@@ -1,4 +1,4 @@
-﻿@model Modelo.Customer
+﻿@model Modelo.Customer;
 
 @{
     ViewData["Title"] = "Home Page";
@@ -18,18 +18,16 @@
                 <label asp-for="@Model.Name">Nome:</label>
                 <input type="text" 
                     class="form-control" 
-                    asp-for="@Model.Name" />
+                    asp-for="@Model.Name"/>
             </div>
         </div>
 
         <button style="margin-bottom: 10px" id="btnCustomer" 
             type="submit" 
-            class="btn btn-primary" 
+            class="btn btn-primary"
             value="Cadastrar">
             Cadastrar
         </button>
-
         </form>
-
     </div>
 </div>

@@ -8,8 +8,7 @@ namespace Modelo
         public double Quantity { get; set; }
         public double PurchasePrice { get; set; }
 
-        public bool Validade()
-        {
+        public bool Validade() {
             bool isValid = true;
 
             double quantityItems = 10;
@@ -22,13 +21,11 @@ namespace Modelo
             return isValid;
         }
 
-        public OrderItem Retrieve()
-        {
+        public OrderItem Retrieve() {
             return new OrderItem();
         }
 
-        public void Save(OrderItem orderItem)
-        {
+        public void Save(OrderItem orderItem) {
         }
     }
 }

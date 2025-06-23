@@ -8,8 +8,7 @@ namespace Aula05.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly IWebHostEnvironment environment;
-
+        private readonly IWebHostEnvironment environment
         private CustomerRepository _customerRepository;
 
         public CustomerController(IWebHostEnvironment environment) {
@@ -62,15 +61,19 @@ namespace Aula05.Controllers
             string fileContent = string.Empty;
             foreach (Customer c in CustomerData.Customers)
             {
-                fileContent += string.Format($"{0:64}", c.Id) string.Format($"{0:64}", c.Name);
-
-                fileContent += $"{c.Id};{c.Name};{c.HomeAddress.Id};{c.HomeAddress.City}" +
-                    $";{c.HomeAddress.Country};{c.HomeAddress.State};" +
-                    $"{c.HomeAddress.Street1};{c.HomeAddress.Street2};" +
-                    $"{c.HomeAddress.PostalCode};{c.HomeAddress.AddressType}\n";
+                fileContent += string.Format("{0:5}{1:64}",c.Id, c.Name) +
+                    string.Format("{0:5}", c.HomeAddress!.Id) +
+                    string.Format("{0:32}", c.HomeAddress!.City) +
+                    string.Format("{0:2}", c.HomeAddress!.State) +
+                    string.Format("{0:32}", c.HomeAddress!.Country) +
+                    string.Format("{0:64}", c.HomeAddress!.Street1) +
+                    string.Format("{0:64}", c.HomeAddress!.Street2) +
+                    string.Format("{0:9}", c.HomeAddress!.PostalCode) +
+                    string.Format("{0:16}", c.HomeAddress!.AddressType) +
+                    "\n"
             }
             SaveFile(fileContent, "Fixed.txt");
-            return View();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -93,6 +96,8 @@ namespace Aula05.Controllers
 
             return RedirectToAction("Index");
         }
+
+
 
         private bool SaveFile(string content, string fileName) {
             bool ret = true;
@@ -123,8 +128,6 @@ namespace Aula05.Controllers
                 string msg = ex.Message;
                 ret = false;
             }
-
-            
 
             return ret;
         }

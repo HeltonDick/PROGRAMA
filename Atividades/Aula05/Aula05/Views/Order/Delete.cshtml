@@ -1,7 +1,8 @@
-﻿@model Modelo.Customer;
+﻿@model Aula05.ViewModels.OrderViewModels
+@model Modelo.Order;
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Titulo"] = "Apagar Order";
 }
 
 <div class="container text-center">
@@ -20,25 +21,24 @@
             Nome:
         </div>
         <div class="col-6">
-               @Modelo.Name
+            @Modelo.Name
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
             <form method="post" asp-action="ConfirmDelete"
-                  asp-controller="Customer">
+                  asp-controller="Order">
                 <input type="hidden" name="id"
                        value="@Model.Id" />
                 <button class="btn btn-primary">
                     Excluir
                 </button>
                 <a asp-action="Index" class="btn btn-danger"
-                   asp-controller="Customer">
+                   asp-controller="Order">
                     Voltar
                 </a>
             </form>
         </div>
     </div>
-
 </div>

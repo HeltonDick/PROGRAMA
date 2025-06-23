@@ -1,9 +1,4 @@
 ﻿using Modelo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -58,6 +53,7 @@ namespace Repository
         public void Update(Order newOrder)
         {
             Order oldOrder = Retrieve(newOrder.Id);
+            oldOrder.Id = newOrder.Id;
             oldOrder.Customer = newOrder.Customer;
             oldOrder.OrderDate = newOrder.OrderDate;
             oldOrder.OrderItems = newOrder.OrderItems;

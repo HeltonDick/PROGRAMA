@@ -10,25 +10,23 @@
         public static int InstanceCount = 0;
         public int ObjectCount = 0;
 
-        public bool Validate()
-        {
+        public bool Validate() {
             bool isValid = true;
 
             isValid = 
                 !string.IsNullOrEmpty(this.Name) && 
                 (this.Id > 0) && 
-                (this.CurrentPrice > 0);
+                (this.CurrentPrice > 0) &&
+                !string.IsNullOrEmpty(this.Description);
             
             return isValid;
         }
 
-        public Product Retrieve()
-        {
+        public Product Retrieve() {
             return new Product();
         }
 
-        public void Save(Product product)
-        {
+        public void Save(Product product) {
         }
     }
 }
