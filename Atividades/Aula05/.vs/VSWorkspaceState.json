@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Aula05",
+    "\\Aula05\\Controllers",
     "\\Aula05\\ViewModels",
     "\\Aula05\\Views",
     "\\Aula05\\Views\\Customer",
     "\\Aula05\\Views\\Order",
-    "\\Modelo"
+    "\\Aula05\\Views\\Shared",
+    "\\Modelo",
+    "\\Repository"
   ],
-  "SelectedNode": "\\Aula05\\Views\\Order\\PlaceOrder.cshtml",
+  "SelectedNode": "\\Aula05\\Controllers\\CustomerController.cs",
   "PreviewInSolutionExplorer": false
 }

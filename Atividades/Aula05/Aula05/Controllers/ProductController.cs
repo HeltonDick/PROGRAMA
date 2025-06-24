@@ -26,7 +26,7 @@ namespace Aula05.Controllers
         public IActionResult create(Product p) {
             _productRepository.Save(p);
             List<Product> products = _productRepository.RetriveAll();
-            return View("Index" products);
+            return View("Index", products);
         }
 
         [HttpPost]
@@ -38,7 +38,7 @@ namespace Aula05.Controllers
         public IActionResult ExportDelimitatedFile() {
             string fileContent = string.Empty;
             foreach (Product p in CustomerData.Products) {
-                fileContent += $"{p.Id};{p.Name};{p.Description};{p.CurrentPrice}\n"
+                fileContent += $"{p.Id};{p.Name};{p.Description};{p.CurrentPrice}\n";
             }
             SaveFile(fileContent, "DelimitedFile.txt");
 
@@ -62,7 +62,7 @@ namespace Aula05.Controllers
         public IActionResult Delete(int? id) {
             if (id == null || id.Value <= 0) return NotFound();
 
-            Product product = _productRepository.Retrive(id.Value)
+            Product product = _productRepository.Retrive(id.Value);
 
             if (product == null) return NotFound();
 

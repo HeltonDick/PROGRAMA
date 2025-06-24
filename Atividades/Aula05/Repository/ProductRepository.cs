@@ -4,30 +4,33 @@ using System.Xml.Linq;
 namespace Repository
 {
     public class ProductRepository {
-        public Product Retrive(int id)
+        public Product Retrieve(int id)
         {
-            foreach (Product p in CustomerData.Products) {
-                if (p.Id == id) { 
+            foreach (Product p in CustomerData.Products)
+                if (p.Id == id)
                     return p;
-                }
-            }
-            return null;
+            return null!;
         }
 
-        public List<Product> RetriveByName( string name) {
+        public List<Product> RetrieveByName(string name) {
             List<Product> ret = new List<Product>();
 
-            foreach (Product p in CustomerData.Products) {
+            foreach (Product p in CustomerData.Products)
                 if (p.Name!.ToLower().Contains(name.ToLower()))
                     ret.Add(p);
 
-                return ret;
-            }
-            return null;
+            return ret;
         }
 
-        public List<Product> RetrieveAll() {
+        public List<Product> RetriveAll() {
             return CustomerData.Products;
+        }
+
+        public void Update(Product newProduct) {
+            Product oldProduct = Retrieve(newProduct.Id);
+            oldProduct.Name = newProduct.Name;
+            oldProduct.Description = newProduct.Description;
+            oldProduct.CurrentPrice = newProduct.CurrentPrice;
         }
 
         public void Save(Product product) {
@@ -39,8 +42,8 @@ namespace Repository
             return CustomerData.Products.Remove(product);
         }
 
-        public bool DeleteById(int Id) {
-            Product product = Retrive(Id);
+        public bool DeleteById(int id) {
+            Product product = Retrieve(id);
 
             if (product != null)
                 return Delete(product);
@@ -48,9 +51,8 @@ namespace Repository
             return false;
         }
 
-        public int GetCount()
-        {
-            return CustomerData.Customers.Count;
+        public int GetCount() {
+            return CustomerData.Products.Count;
         }
     }
 }

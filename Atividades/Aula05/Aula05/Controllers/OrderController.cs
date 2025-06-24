@@ -5,6 +5,7 @@ using Aula05.ViewModels;
 
 namespace Aula05.Controllers
 {
+    /*
     public class OrderController : Controller
     {
         private readonly IWebHostEnvironment _environment;
@@ -24,7 +25,7 @@ namespace Aula05.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            
+
             return View(_orderRepository.RetrieveAll());
         }
 
@@ -32,6 +33,7 @@ namespace Aula05.Controllers
         public IActionResult Create() {
             OrderViewModels viewModel = new();
             viewModel.Customers = _customerRepository.RetrieveAll();
+
             var products = _productRepository.RetrieveAll();
             List<SelectedItem> items = [];
             foreach (var product in products)
@@ -40,5 +42,28 @@ namespace Aula05.Controllers
             }
             return View();
         }
-    }
-}
+
+        [HttpPost]
+        public IActionResult Create(OrderViewModels viewModel)
+        {
+            Order order = new Order();
+            order.Customer = _customerRepository.Retrieve(model.CustomerId!.Values);
+            order.OrderDate = DateTime.Now;
+            int count = 1;
+            foreach (var item in model.SelectedItems!) {
+                if (item.IsSelected) {
+                    order.OrderItems.Add(new OrderItem()
+                    {
+                        Id = count,
+                        Product = _productRepository.Retrieve(item.OrderItem.Product.Id),
+                        Quantity = item.OrderItem.Quantity,
+                        PurchasePrice = item.OrderItem.PurchasePrice;
+                    });
+                    count++;
+                }
+            }
+
+            order.OrderItems = new List<OrderItem>();
+        }
+    }*/
+};

@@ -15,16 +15,16 @@ namespace Repository
 
         public List<Order> RetrieveByName(string name)
         {
-            List<Order> ret = new ();
+            List<Order> ret = [];
 
             foreach (Order o in CustomerData.Orders)
-                if (o.Customer!.ToLower().Contains(name.ToLower()))
+                if (o.Customer!.Name!.ToLower().Contains(name.ToLower()))
                     ret.Add(o);
 
             return ret;
         }
 
-        public List<Customer> RetrieveAll()
+        public List<Order> RetrieveAll()
         {
             return CustomerData.Orders;
         }
@@ -56,14 +56,10 @@ namespace Repository
             oldOrder.Id = newOrder.Id;
             oldOrder.Customer = newOrder.Customer;
             oldOrder.OrderDate = newOrder.OrderDate;
-            oldOrder.OrderItems = newOrder.OrderItems;
             oldOrder.ShippingAddress = newOrder.ShippingAddress;
-
+            oldOrder.OrderItems = newOrder.OrderItems;
         }
 
-        public int GetCount()
-        {
-            return CustomerData.Customers.Count;
-        }
+        public int GetCount() => CustomerData.Orders.Count;
     }
 }

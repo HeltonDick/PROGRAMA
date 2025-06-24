@@ -103,3 +103,15 @@ C:\Users\427603\Desktop\prog1-25\Atividades\Aula05\Aula05\obj\Debug\net9.0\refin
 C:\Users\427603\Desktop\prog1-25\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.pdb
 C:\Users\427603\Desktop\prog1-25\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.genruntimeconfig.cache
 C:\Users\427603\Desktop\prog1-25\Atividades\Aula05\Aula05\obj\Debug\net9.0\ref\Aula05.dll
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.csproj.AssemblyReference.cache
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.AssemblyInfoInputs.cache
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.AssemblyInfo.cs
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.csproj.CoreCompileInputs.cache
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.RazorAssemblyInfo.cache
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.RazorAssemblyInfo.cs
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.sourcelink.json
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.dll
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\refint\Aula05.dll
+C:\Users\427603\Desktop\PROGRAMA\Atividades\Aula05\Aula05\obj\Debug\net9.0\Aula05.pdb

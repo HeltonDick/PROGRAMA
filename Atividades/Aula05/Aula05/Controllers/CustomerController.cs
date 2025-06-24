@@ -8,7 +8,7 @@ namespace Aula05.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly IWebHostEnvironment environment
+        private readonly IWebHostEnvironment environment;
         private CustomerRepository _customerRepository;
 
         public CustomerController(IWebHostEnvironment environment) {
@@ -61,7 +61,7 @@ namespace Aula05.Controllers
             string fileContent = string.Empty;
             foreach (Customer c in CustomerData.Customers)
             {
-                fileContent += string.Format("{0:5}{1:64}",c.Id, c.Name) +
+                fileContent += string.Format("{0:5}{1:64}", c.Id, c.Name) +
                     string.Format("{0:5}", c.HomeAddress!.Id) +
                     string.Format("{0:32}", c.HomeAddress!.City) +
                     string.Format("{0:2}", c.HomeAddress!.State) +
@@ -70,7 +70,7 @@ namespace Aula05.Controllers
                     string.Format("{0:64}", c.HomeAddress!.Street2) +
                     string.Format("{0:9}", c.HomeAddress!.PostalCode) +
                     string.Format("{0:16}", c.HomeAddress!.AddressType) +
-                    "\n"
+                    "\n";
             }
             SaveFile(fileContent, "Fixed.txt");
             return RedirectToAction("Index");

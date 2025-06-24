@@ -29,7 +29,7 @@ namespace Modelo
                 !string.IsNullOrEmpty(this.State) &&
                 !string.IsNullOrEmpty(this.PostalCode) &&
                 !string.IsNullOrEmpty(this.Country) &&
-                !string.IsNullOrEmpty(this.AddressType) &&
+                !string.IsNullOrEmpty(this.AddressType);
 
             return isValid;
         }
