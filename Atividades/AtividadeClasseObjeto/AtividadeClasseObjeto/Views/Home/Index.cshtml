@@ -1,0 +1,35 @@
+﻿@model List<AtividadeClasseObjeto.Models.Veterinaria>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Histórico de Atendimentos</h1>
+</div>
+
+<div class="historico-atendimentos">
+    <table class="tabela">
+        <thead>
+            <tr>
+                <th>Clínica Veterinária</th>
+                <th>Doutor</th>
+                <th>Nome do Animal</th>
+                <th>Laudo</th>
+                <th>Data do Atendimento</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ClinicaVet</td>
+                    <td>@item.NomeDoutor</td>
+                    <td>@item.NomeAnimal</td>
+                    <td>@item.Laudo</td>
+                    <td>@item.DataAtendimento</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

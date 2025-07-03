@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Resultado da Contagem";
+}
+
+<h1>Resultado da Contagem</h1>
+
+@if (ViewBag.TextoOriginal != null)
+{
+    <p>O texto digitado foi: <strong>@ViewBag.TextoOriginal</strong></p>
+}
+
+@if (ViewBag.Quantidade != null)
+{
+    <p>O número de caracteres no texto é: <strong>@ViewBag.Quantidade</strong></p>
+}
+
+<p><a asp-controller="Recursividade" asp-action="Index">Voltar</a></p>

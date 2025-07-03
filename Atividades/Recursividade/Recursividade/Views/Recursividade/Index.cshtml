@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Atividades";
+}
+
+<h1>Recursividade</h1>
+
+<br />
+
+<h2>Atividade 1</h2>
+<h3>
+    Escreva um programa recursivo em C Sharp para
+    imprimir os números de n até 1 (decrescente);
+</h3>
+<form asp-controller="Recursividade" asp-action="Atividade1" method="post">
+    <label for="n">Digite o valor de n:</label>
+    <input type="number" id="n" name="n" required />
+    <button type="submit">Imprimir Decrescente</button>
+</form>
+
+<br />
+<br />
+
+<h2>Atividade 2</h2>
+<h3>
+    Escreva um programa em C# capaz de sumarizar os número de 1 a n
+    por exemplo: n = 10 [1+2+3+4+5+6+7+8+9+10];
+</h3>
+<form asp-controller="Recursividade" asp-action="Atividade2" method="post">
+    <label for="n">Digite o valor de n:</label>
+    <input type="number" id="n" name="n" required />
+    <button type="submit">Somar Números</button>
+</form>
+
+<br />
+<br />
+
+<h2>Atividade 3</h2>
+<h3>
+    Escreva um programa recursivo em C# capaz de contar quantos caracteres
+    tem em uma string;
+</h3>
+<form asp-controller="Recursividade" asp-action="Atividade3" method="post">
+    <label for="texto">Digite um texto:</label>
+    <input type="text" id="texto" name="texto" required />
+    <button type="submit">Contar</button>
+</form>
+
+<br />
+<br />
+
+<h2>Atividade 4</h2>
+<h3>
+    Escreva um programa recursivo, que seja capaz de identificar se uma palavra é ou não um PALÍNDROMO: OVO, ARARA, MUSSUM, RADAR, ETC
+</h3>
+<form asp-controller="Recursividade" asp-action="Atividade4" method="post">
+    <label for="palavra">Digite uma palavra:</label>
+    <input type="text" id="palavra" name="palavra" required />
+    <button type="submit">Verificar</button>
+</form>
+
+<br />
+<br />

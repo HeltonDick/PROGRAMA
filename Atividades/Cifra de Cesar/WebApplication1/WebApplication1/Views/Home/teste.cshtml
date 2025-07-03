@@ -1,0 +1,13 @@
+﻿@Model.WebApplication1.Controllers;
+
+<h4>Texto Original:</h4>
+<p>@Model.Texto</p>
+
+<h4>Palavra Codificada:</h4>
+<ul>
+    @if (Model.palavraCodificada != null && Model.palavraCodificada.Any())
+    {
+        foreach (var letra in Model.palavraCodificada) <li>@letra</li>
+    }
+    else <li>Nenhum caractere válido encontrado.</li>
+</ul>
